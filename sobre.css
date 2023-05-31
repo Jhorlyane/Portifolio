@@ -1,0 +1,290 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+}
+
+
+p{
+    color: #f74600;
+    text-align: center;
+}
+
+
+.main-header h1 span{
+    color:#8a2be2;
+}
+
+body{
+    text-align: center;
+}
+
+header{
+    background-color: #000000;
+    padding: 10px;
+}
+
+h1{
+    margin-bottom: 50px;
+}
+
+h2{
+    color: rgb(255, 0, 0);
+}
+
+h4{
+    color: #000000;
+    margin: 0;
+    text-align: justify;
+}
+
+p{
+    font-size: 25px;
+    color: #b000f5;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.toggle-btn {
+
+    display: flex;
+    margin: auto;
+    width: 75px;
+    height: 40px;
+    box-sizing: border-box;
+
+}
+
+
+
+.button {
+  /* position:absolute; */
+  background-color: white;
+  /* top: 50%; */
+  /* width: 74px; */
+  /* height: 36px; */
+  /* margin: -20px auto 0 auto; */
+  /* overflow: hidden; */
+  align-items: center;
+}
+
+.button span:after { 
+     content: "\00bb"; 
+     position: absolute; 
+     top: 0; 
+     right: -20px; 
+     transition: 0.5s; 
+ } 
+
+ .button:hover span { 
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+button:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+  }  
+
+
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    text-align: center;
+}
+
+.menu-hamburger{
+    display: block;
+    cursor: pointer;
+    
+}
+
+.bar{
+    width: 30px;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 5px;
+    text-align: center;
+}
+
+.menu{
+    display: flex;
+    list-style: none; /*tirar marcador do link*/
+}
+
+.menu li a{
+    color: rgb(253, 120, 247);
+    text-decoration: none;
+    padding: 6.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.menu.active{ /*onclick*/
+    display: flex;
+} 
+
+figure{
+    background-color: #00f535;
+    
+}
+
+
+.galeria{
+    display: flex;
+    height: 15rem;
+    gap:1rem;
+}
+
+.galeria > div{
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    transition: all .25s cubic-bezier(1,1,1,1.4);
+}
+
+.galeria > div:hover{
+    flex:3;
+}
+
+
+footer{
+    margin: 0;
+    background-color:rgb(1, 1, 1);
+    width: 100%;
+    position: absolute;
+}
+ footer i{
+    list-style: none;
+ }
+ 
+ i{
+    font-size: 1.5em;
+    padding-right: 13px;
+    color: rgba(172, 70,1)
+}
+ a i{
+    font-size: 20px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+
+.container-footer{
+    
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+footer h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(164, 4, 238);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+footer p{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1em;
+    font-weight: 600;
+    color: rgb(172, 70, 1)
+}
+    
+
+@media (max-width: 768px){
+
+    .menu-hamburger{
+        display: block;
+    }
+
+    .menu{
+        display: none; /* não aparece a lista(nono), aparece com "block"*/
+    }
+    li{
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+    }
+   
+    .menu li{
+        margin: 10px 0;
+    }
+
+    .menu.ativo{
+        display: flex;
+    }
+
+    /* .menu.active{ onclick */
+        /* display: flex; */
+    /* }  */
+
+    footer{
+        position: relative;
+        text-align: center;
+        list-style: none;
+    }
+
+    /* img{ 
+        flex-direction: row;
+        display: block;
+        width: 100%;
+    } */
+
+    footer a{
+        list-style: none;
+    }
+
+    footer p{
+        text-align:center ;
+    }
+
+    a i{
+        font-size: 20px;
+        margin-top: 10px;
+        list-style: none;
+    }
+   
+    
+    .container-footer{
+        display: inline-block;
+       text-align: center;
+    }
+
+}
+
+/*modo claro e escuro*/
+.dark-mode {
+    background-color: #000000;
+    color: #1b34be;
+    
+}
+.dark-mode p{
+    color: #1900f5;
+}
+
+.dark-mode h4{
+    color: #f54e00;
+}
+
+.dark-mode-header{
+    background-color: #000000;
+    color: #0042f7;
+}
+
+.dark-mode-header-button{
+    background-color: #00ff95;
+    color: #000000;
+}

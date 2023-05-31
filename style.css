@@ -1,0 +1,316 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+    min-height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction:  column;
+    min-height: 100%;
+}
+header{
+    background-color: rgb(222, 222, 222);
+    padding: 10px;
+    margin: 0%;
+    text-align: center;
+}
+
+.bar{
+    width: 35px;
+    height: 5px;
+    background-color: aliceblue;
+    margin: 5px;
+}
+
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*  
+.menu-hamburger{
+    display: block;
+    cursor: pointer;
+    
+ } */
+
+/* .bar{ 
+    width: 30px;
+    height: 5px;
+    background-color: rgb(209, 44, 33);
+    margin: 5px;
+    text-align: center;
+/* } */
+
+.menu{
+    display: flex;
+    list-style: none; /*tirar marcador do link*/
+}
+
+.menu li a{
+    color: rgb(253, 120, 247);
+    font-family:cursive;
+    padding: 6.5px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* .menu.active{ onclick 
+    display: flex;
+    display: block;
+ }  */
+
+/* BOTÃO */
+.toggle-btn {
+
+    display: flex;
+    margin: auto;
+    width: 75px;
+    height: 40px;
+    box-sizing: border-box;
+
+}
+
+
+button{
+    background-color:aqua;
+    align-items: center;
+}
+
+.button span:after { 
+     content: "\00bb"; 
+     position: absolute; 
+     top: 0; 
+     right: -20px; 
+     transition: 0.5s; 
+ } 
+
+ .button:hover span { 
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+button:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+  } 
+
+
+  h1{
+    margin-bottom: 50px;
+    font-family:cursive;
+    color: #fb00ff;
+}
+h2{
+    color: chartreuse;
+}
+
+
+  p{
+    font-family: monospace;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: #fb00ff;
+    text-align: justify;
+}
+
+
+.conteudo{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    gap: 5px;
+}
+
+i{
+    font-size: 1.5em;
+    padding-right: 13px;
+    color: rgba(172, 70,1)
+}
+
+
+main{
+   
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 25px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+ }
+ 
+ table td{
+    font-size: 30px;
+    margin-right: 100px;
+}
+
+img{
+    width: 768px;
+    height: 768px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+
+footer{
+    margin: 0;
+    background-color:rgb(1, 1, 1);
+    width: 100%;
+
+}
+
+.container-footer{
+    
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+footer h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(164, 4, 238);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+footer p{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1em;
+    font-weight: 600;
+    color: rgb(172, 70, 1)
+}
+    
+a i{
+    font-size: 20px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+    /* width: 100%; */
+    /* display: grid; */
+/* } */
+
+
+@media (max-width: 768px){
+
+    body{
+        display: inline-block;
+   
+    }
+
+    /* MENU */
+
+    .menu-hamburger{
+        display: block;
+    }
+
+    .menu{
+         display: none; /* não aparece a lista(nono), aparece com "block" */ 
+        align-items: center;
+    }
+    li{
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+    }
+    .menu li{
+        margin: 10px 0;
+    }
+
+    
+    .menu.ativo{
+        display: flex;
+    }
+
+    /* .menu.active{ onclick 
+        /* display: flex; */
+    /* }  */
+    
+    .conteudo{
+        display: inline-block;
+    }
+
+    footer{
+        position: relative;
+        text-align: center;
+        list-style: none;
+    }
+    
+    img{
+        flex-direction: row;
+        display: block;
+        width: 100%;
+    }
+
+    footer p{
+        text-align:center ;
+    }
+
+
+   
+    
+    .container-footer{
+        display: inline-block;
+       text-align: center;
+    }
+    
+    a i{
+        font-size: 20px;
+        margin-top: 10px;
+        list-style: none;
+    }
+    .coluna{
+        margin-bottom: 20px;
+        
+        }
+    
+
+}
+
+/*modo claro e escuro*/
+.dark-mode {
+    background-color: #000000;
+    color: #a600ff;
+    
+}
+
+.dark-mode p{
+    
+    color: rgb(190, 45, 166);
+}
+
+.dark-mode-header{
+    background-color: #000000;
+    color: #da00f7;
+}
+
+.dark-mode-header-button{
+    background-color: #1b8f63;
+    color: #000000;
+    
+}
+
+.dark-mode header{
+    background-color: #050781;
+}
+
+
+
+
+
+
+
+
+
